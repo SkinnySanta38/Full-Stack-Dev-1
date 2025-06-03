@@ -6,13 +6,6 @@ const logger = require('morgan');
 
 // Define Routers
 const indexRouter = require('./app_server/routes/index');
-const usersRouter = require('./app_server/routes/users');
-const travelRouter = require('./app_server/routes/travel');
-const roomsRouter = require('./app_server/routes/rooms');
-const mealsRouter = require('./app_server/routes/meals');
-const newsRouter = require('./app_server/routes/news');
-const aboutRouter = require('./app_server/routes/about');
-const contactsRouter = require('./app_server/routes/contact');
 const apiRouter = require('./app_api/routes/index');
 
 const handlebars = require('hbs');
@@ -38,13 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Wire-up routes to controllers
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/travel', travelRouter);
-app.use('/rooms', roomsRouter);
-app.use('/meals', mealsRouter);
-app.use('/news', newsRouter);
-app.use('/about', aboutRouter);
-app.use('/contact', contactsRouter);
 app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
