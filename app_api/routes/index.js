@@ -4,14 +4,16 @@ const router = express.Router();
 // Import controller to route
 const tripsController = require('../controllers/trips');
 
-// GET Method routes tripsList
+// Define routes for trips endpoint
 router
     .route('/trips')
-    .get(tripsController.tripsList); 
+    .get(tripsController.tripsList) // GET method routes tripList
+    .post(tripsController.tripsAddTrip); // POST method adds a trip 
 
-// GET Method routes tripsFindByCode - requires parameter
+// Defines routes by tripCode
 router
     .route('/trips/:tripCode')
-    .get(tripsController.tripsFindByCode);
+    .get(tripsController.tripsFindByCode) // GET method routes tripsFindByCode - requires parameter
+    .put(tripsController.tripsUpdateTrip); // PUT method routes tripUpdateTrip - requires parameter
 
 module.exports = router;
