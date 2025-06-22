@@ -74,7 +74,7 @@ const tripsAddTrip = async(req, res) => {
         }
 };
 
-// PUT: /trips/:tripCode - Adds a new Trip
+// PUT: /trips/:tripCode - Edits a Trip
 // Regardless of outcome, response must include HTML statuscode
 // and JSON message to the requesting client
 const tripsUpdateTrip = async(req, res) => {

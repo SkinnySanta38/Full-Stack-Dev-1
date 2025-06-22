@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TripListingComponent } from './trip-listing/trip-listing';
 import { RouterModule } from '@angular/router';
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, TripListingComponent, RouterModule],
+  imports: [CommonModule, RouterModule, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
